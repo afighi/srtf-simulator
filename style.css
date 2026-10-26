@@ -1,0 +1,169 @@
+* {box-sizing: border-box;}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Input container styling (fixed width and absolute position) */
+.input-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 20%; /* Fixed width */
+    float: left;
+    margin: 20px;
+    margin-left: 200px;
+    position: absolute;
+}
+
+/* Output container styling (wider than input) */
+.output-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Wider container */
+    float: right; /* Align output to the right */
+    margin: 20px;
+    margin-right: 250px;
+}
+
+/* Results section styling */
+.results {
+    text-align: left;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Header styling */
+h1 {
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+h2 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input section styling */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Input text field styling */
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds ellipsis for long text */
+}
+
+/* Prevent input number spinners */
+input[type="text"]::-webkit-inner-spin-button,
+input[type="text"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Button styling */
+button {
+    width: 30%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #7B2CBF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: left;
+}
+button:hover {background-color: #5A189A;}
+
+/* Clear button specific styling */
+#clear-btn {
+    background-color: #f44336;
+}
+#clear-btn:hover {background-color: #d32f2f;}
+
+/* Process table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #E1E1E1;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+th {
+    color: #85889B;
+    font-size: 14px;
+    background-color: #FEF9FF;
+}
+
+/* Gantt chart container styling */
+#gantt-container {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent compression */
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+/* Process block wrapper for alignment */
+.process-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 70px; /* Fixed width for each block */
+    text-align: left;
+}
+
+/* Process block styling */
+.process-block {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    width: 100%; /* Ensure block fills wrapper width */
+}
+
+/* End time label styling */
+.time-label {
+    font-size: 12px;
+    width: 100%; /* Align with process block */
+    position: absolute;
+    top: 60px; /* Positioned under the block */
+    text-align: left;
+    padding-left: 5px;
+}
+
+

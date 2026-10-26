@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortest Remaining Time First Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Input Section -->
+    <div class="input-container">
+        <h1>Input</h1>
+        <h2>Shortest Remaining Time First (SRTF)</h2>
+        <div class="input-section">
+            <label for="arrival-times">Arrival Times:</label>
+            <input type="text" id="arrival-times" placeholder="e.g., 0 1 2"><br>
+            <label for="burst-times">Burst Times:</label>
+            <input type="text" id="burst-times" placeholder="e.g., 5 3 1">
+            <button id="add-process-btn">Solve</button>
+            <button id="clear-btn">Clear</button>
+        </div>
+        
+        <!-- Results Section -->
+        <div class="results">
+            <hr>
+            <h2>Results</h2>
+            <p><strong>Average Turn - around Time:</strong> <span id="turnaround-time"></span></p>
+            <p><strong>Average Waiting Time:</strong> <span id="waiting-time"></span></p>
+            <p><strong>CPU Utilization:</strong> <span id="cpu-utilization"></span></p>
+        </div>
+    </div>
+
+    <!-- Process Section -->
+    <div class="output-container">
+        <h1>Output</h1>
+        <h2>Order of Processing</h2>
+        <div id="gantt-container">
+            <!-- Gantt chart will be dynamically generated here -->
+        </div>
+        <hr>
+        <h2>Process Table</h2>
+        <table id="process-table">
+            <thead>
+                <tr>
+                    <th>Job</th>
+                    <th>Arrival Time (AT)</th>
+                    <th>Burst Time (BT)</th>
+                    <th>End Time (ET)</th>
+                    <th>(TT) Turn - around Time (ET - AT)</th>
+                    <th>Waiting Time (TT - BT)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
